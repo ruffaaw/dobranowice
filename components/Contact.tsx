@@ -100,15 +100,32 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full flex flex-col items-center bg-[#DAD7CD] relative scroll-mt-20 py-10 px-4"
+      className="w-full flex flex-col items-center bg-gradient-to-b from-[#f1faee] from-90% to-[#1d3557] relative scroll-mt-20 py-10 px-4"
     >
       <div className="max-w-screen-xl w-full text-center">
-        <div>
-          <p className="text-3xl sm:text-4xl lg:text-6xl text-[#344E41] font-bold break-words max-w-full">
+        <div className="flex items-center justify-center pt-10">
+          <span
+            className="h-[2px] w-16 bg-[#1d3557] mr-4 "
+            data-aos="fade-right"
+            data-aos-duration="800"
+          ></span>
+
+          <h1
+            className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#1d3557] "
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="800"
+          >
             KONTAKT
-          </p>
+          </h1>
+
+          <span
+            className="h-[2px] w-16 bg-[#1d3557] ml-4 "
+            data-aos="fade-left"
+            data-aos-duration="800"
+          ></span>
         </div>
-        <p className="text-lg md:text-3xl font-bold text-[#588157] pt-3">
+        <p className="text-lg md:text-3xl font-bold text-[#457b9d] pt-3">
           Masz jakieś pytania? Zainteresowała Cię nasza oferta? Zapraszamy
           serdecznie do kontaktu.
         </p>
@@ -206,7 +223,7 @@ export default function Contact() {
                   checked={formData.privacyPolicy}
                   onChange={handleChange}
                   required
-                  className="mr-2"
+                  className="mr-2 cursor-pointer accent-[#1d3557]"
                 />
                 <label
                   htmlFor="privacyPolicy"
@@ -218,7 +235,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="mt-auto w-full py-3 bg-[#588157] text-white text-lg rounded-md shadow-md hover:bg-[#344E41] transition duration-300"
+                className="mt-auto w-full py-3 bg-[#1d3557] text-white text-lg rounded-md shadow-md hover:bg-[#e63946] transition duration-300 cursor-pointer"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Wysyłanie..." : "Wyślij"}
@@ -241,7 +258,7 @@ export default function Contact() {
               height={160}
             />
           </a>
-          <div className="text-left font-bold text-gray-800 max-w-md">
+          <div className="text-left font-bold text-black max-w-md">
             <h2 className="text-xl md:text-2xl mb-3">
               Kontakt biura nieruchomości
             </h2>
