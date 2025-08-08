@@ -13,13 +13,31 @@ export default function Investment() {
   return (
     <section
       id="investment"
-      className="w-full h-full flex flex-col items-center bg-[#DAD7CD] relative scroll-mt-20"
+      className="w-full h-full flex flex-col items-center bg-gradient-to-b from-[#f1faee] to-[#a8dadc] relative scroll-mt-20"
     >
-      <div>
-        <p className="text-3xl sm:text-4xl lg:text-6xl text-[#344E41] pt-10 font-bold text-center break-words max-w-full">
+      <div className="flex items-center justify-center pt-10">
+        <span
+          className="h-[2px] w-16 bg-[#1d3557] mr-4"
+          data-aos="fade-right"
+          data-aos-duration="800"
+        ></span>
+
+        <h1
+          className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#1d3557]"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="800"
+        >
           O INWESTYCJI
-        </p>
+        </h1>
+
+        <span
+          className="h-[2px] w-16 bg-[#1d3557] ml-4"
+          data-aos="fade-left"
+          data-aos-duration="800"
+        ></span>
       </div>
+
       <div className="flex flex-col lg:flex-row items-center justify-center pt-4 p-2 sm:px-10 gap-2 relative max-w-[1722px] overflow-hidden">
         <div
           className="lg:hidden relative  flex justify-center items-center overflow-hidden"
@@ -38,7 +56,7 @@ export default function Investment() {
           />
           <button
             className={`absolute bottom-4 w-28 h-auto bg-opacity-75 text-white px-4 py-2 rounded-md ${
-              isDay ? "bg-[#588157]" : "bg-[#344E41]"
+              isDay ? "bg-[#457b9d]" : "bg-[#1d3557]"
             } transition-all duration-300 flex flex-row items-center justify-center gap-2`}
             onClick={toggleImage}
           >
@@ -46,7 +64,7 @@ export default function Investment() {
             {isDay ? "Dzień" : "Noc"}
           </button>
         </div>
-        <div className="bg-[#588157] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5">
+        <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5">
           <div className="p-6 sm:p-8 lg:w-3/5 text-white" data-aos="fade-right">
             <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
               Lokalizacja inwestycji
@@ -83,7 +101,7 @@ export default function Investment() {
             </div>
             <div className="flex justify-center">
               <button
-                className="bg-[#344E41] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md hover:bg-[#A3B18A] transition"
+                className="bg-[#1d3557] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md hover:bg-[#e63946] transition font-semibold cursor-pointer"
                 onClick={() =>
                   window.open(
                     "https://maps.app.goo.gl/KssHA4FVSg5khjQi8",
@@ -113,7 +131,7 @@ export default function Investment() {
           />
           <button
             className={`absolute bottom-4 w-1/3 h-auto bg-opacity-75 text-white px-4 py-2 rounded-md ${
-              isDay ? "bg-[#588157]" : "bg-[#344E41]"
+              isDay ? "bg-[#457b9d]" : "bg-[#1d3557]"
             } transition-all duration-300 flex flex-row items-center justify-center gap-2`}
             onClick={toggleImage}
           >
@@ -151,7 +169,7 @@ export default function Investment() {
             unoptimized
           />
         </div>
-        <div className="bg-[#588157] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 justify-end ">
+        <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 justify-end ">
           <div className="p-6 sm:p-8 lg:w-3/5 text-white" data-aos="fade-left">
             <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 ">
               Własność i prywatność
@@ -208,7 +226,7 @@ export default function Investment() {
             unoptimized
           />
         </div>
-        <div className="bg-[#588157] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5">
+        <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5">
           <div className="p-6 sm:p-8 lg:w-3/5 text-white" data-aos="fade-right">
             <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
               Architektura i funkcjonalność
@@ -303,7 +321,7 @@ export default function Investment() {
             unoptimized
           />
         </div>
-        <div className="bg-[#588157] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 justify-end ">
+        <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 justify-end ">
           <div className="p-6 sm:p-8 lg:w-3/5 text-white" data-aos="fade-left">
             <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 ">
               Standard deweloperski Premium
