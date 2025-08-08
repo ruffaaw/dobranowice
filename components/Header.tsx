@@ -41,7 +41,7 @@ export default function Header() {
         >
           <Link href="#home">
             <img
-              src="/logo_dlugie.png"
+              src="favicon.ico"
               alt="Logo"
               className="h-16 w-60 mr-2 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] object-contain"
             />
