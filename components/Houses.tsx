@@ -155,7 +155,7 @@ export default function Houses() {
               <div
                 key={index}
                 id={`house-${house.numer}`}
-                className="flex flex-col bg-white p-4 rounded-lg shadow-md space-y-4"
+                className="flex flex-col justify-between bg-white p-4 rounded-lg shadow-md space-y-4"
               >
                 <div>
                   <p className="text-[#344E41] text-xl font-semibold">
