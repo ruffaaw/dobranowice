@@ -66,17 +66,17 @@ export default function Profits() {
   return (
     <section
       id="profits"
-      className="w-full h-full flex flex-col items-center bg-gradient-to-b from-[#a8dadc] to-[#f1faee] relative scroll-mt-20"
+      className="w-full h-full flex flex-col items-center bg-gradient-to-b from-[#a8dadc] to-[#1d3557] relative scroll-mt-20"
     >
       <div className="flex items-center justify-center pt-10">
         <span
-          className="h-[2px] w-16 bg-[#1d3557] mr-4"
+          className="h-[2px] w-16 bg-[#1d3557] mr-4 "
           data-aos="fade-right"
           data-aos-duration="800"
         ></span>
 
         <h1
-          className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#1d3557]"
+          className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#1d3557] "
           data-aos="fade-up"
           data-aos-delay="200"
           data-aos-duration="800"
@@ -85,7 +85,7 @@ export default function Profits() {
         </h1>
 
         <span
-          className="h-[2px] w-16 bg-[#1d3557] ml-4"
+          className="h-[2px] w-16 bg-[#1d3557] ml-4 "
           data-aos="fade-left"
           data-aos-duration="800"
         ></span>
@@ -100,16 +100,16 @@ export default function Profits() {
               data-aos="fade-up"
               data-aos-delay={item.delay}
             >
-              <div className="max-md:h-full h-20 flex justify-center items-center">
+              <div className="max-md:h-full h-20 flex justify-center items-center drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
                 {item.icon}
               </div>
               <div className="max-md:h-full h-12 lg:h-24 xl:h-16 flex justify-center items-center ">
-                <p className="font-bold text-lg xl:text-xl text-center">
+                <p className="font-bold text-lg xl:text-xl text-center text-[#f1faee] drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
                   {item.title}
                 </p>
               </div>
-              <div className="max-md:h-full h-16 lg:h-28 xl:h-24 flex justify-center items-center ">
-                <p className=" text-base xl:text-lg text-center">
+              <div className="max-md:h-full h-16 lg:h-28 xl:h-24 flex justify-center items-center text-[#f1faee]">
+                <p className=" text-base xl:text-lg text-center drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
                   {item.description}
                 </p>
               </div>
