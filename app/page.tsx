@@ -4,6 +4,7 @@ import HomeSection from "../components/HomeSection";
 import Profits from "@/components/Profits";
 import Gallery from "@/components/Gallery";
 import Houses from "@/components/Houses";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Profits />
       <Houses />
       <Gallery />
+      <Contact />
     </div>
   );
 }
