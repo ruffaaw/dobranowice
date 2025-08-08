@@ -117,6 +117,8 @@ export default function Houses() {
               width={600}
               height={400}
               data-aos="fade-down"
+              unoptimized
+              quality={100}
             />
             {houseOffers.map((house, index) => (
               <button

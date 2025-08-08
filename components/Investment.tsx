@@ -134,6 +134,7 @@ export default function Investment() {
             className="rounded-lg shadow-lg"
             width={533}
             height={400}
+            unoptimized
           />
         </div>
 
@@ -147,6 +148,7 @@ export default function Investment() {
             width={533}
             height={400}
             data-aos="fade-right"
+            unoptimized
           />
         </div>
         <div className="bg-[#588157] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 justify-end ">
@@ -203,6 +205,7 @@ export default function Investment() {
             className="rounded-lg shadow-lg w-full"
             width={533}
             height={400}
+            unoptimized
           />
         </div>
         <div className="bg-[#588157] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5">
@@ -268,6 +271,7 @@ export default function Investment() {
             width={533}
             height={400}
             data-aos="fade-left"
+            unoptimized
           />
         </div>
       </div>
@@ -283,6 +287,7 @@ export default function Investment() {
             width={533}
             height={400}
             data-aos="fade-right"
+            unoptimized
           />
         </div>
         <div className="lg:hidden relative flex justify-center items-center overflow-hidden">
@@ -295,6 +300,7 @@ export default function Investment() {
             className="rounded-lg shadow-lg w-full"
             width={533}
             height={400}
+            unoptimized
           />
         </div>
         <div className="bg-[#588157] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 justify-end ">

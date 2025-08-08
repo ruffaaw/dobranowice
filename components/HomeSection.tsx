@@ -24,6 +24,7 @@ export default function HomeSection() {
         alt="Nowoczesne osiedle mieszkaniowe Pułaskiego 32 w Wieliczce"
         fill
         quality={100}
+        unoptimized
         priority
         style={{ objectFit: "cover", objectPosition: "center" }}
         data-aos="fade-in"
