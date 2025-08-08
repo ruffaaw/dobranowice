@@ -20,10 +20,32 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="w-full h-full flex flex-col items-center bg-[#DAD7CD] relative scroll-mt-28"
+      className="w-full h-full flex flex-col items-center bg-gradient-to-b from-[#a8dadc] to-[#f1faee] relative scroll-mt-28 pt-10"
     >
+      <div className="flex items-center justify-center pt-10">
+        <span
+          className="h-[2px] w-16 bg-[#1d3557] mr-4 "
+          data-aos="fade-right"
+          data-aos-duration="800"
+        ></span>
+
+        <h1
+          className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#1d3557] "
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="800"
+        >
+          GALERIA
+        </h1>
+
+        <span
+          className="h-[2px] w-16 bg-[#1d3557] ml-4 "
+          data-aos="fade-left"
+          data-aos-duration="800"
+        ></span>
+      </div>
       <div
-        className="w-full lg:w-7/12 rounded-lg"
+        className="w-full lg:w-7/12 rounded-lg py-10"
         data-aos="zoom-in"
         data-aos-duration="1000"
         data-aos-delay="300"

@@ -97,12 +97,29 @@ export default function Houses() {
   return (
     <section
       id="houses"
-      className="w-full flex flex-col items-center justify-between bg-[#DAD7CD] relative scroll-mt-20"
+      className="w-full flex flex-col items-center justify-between bg-gradient-to-b from-[#1d3557] to-[#a8dadc] relative scroll-mt-20"
     >
-      <div className="w-full text-center pt-10 lg:py-10">
-        <p className="text-3xl sm:text-4xl lg:text-6xl text-[#344E41] font-bold break-words max-w-full">
+      <div className="flex items-center justify-center pt-10">
+        <span
+          className="h-[2px] w-16 bg-white mr-4 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
+          data-aos="fade-right"
+          data-aos-duration="800"
+        ></span>
+
+        <h1
+          className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="800"
+        >
           DOMY
-        </p>
+        </h1>
+
+        <span
+          className="h-[2px] w-16 bg-white ml-4 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
+          data-aos="fade-left"
+          data-aos-duration="800"
+        ></span>
       </div>
 
       <div className="w-full px-6 lg:px-10 py-10 flex flex-col md:flex-row items-start gap-10 md:h-auto">
@@ -113,7 +130,7 @@ export default function Houses() {
               alt="Estate"
               layout="responsive"
               objectFit="cover"
-              className="rounded-lg shadow-lg"
+              className="rounded-lg drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
               width={600}
               height={400}
               data-aos="fade-down"
@@ -147,7 +164,7 @@ export default function Houses() {
 
         <div
           ref={listRef}
-          className="w-full md:w-[45%] flex justify-center items-start overflow-y-auto max-h-[46vh] md:max-h-[48vh]"
+          className="w-full md:w-[45%] flex justify-center items-start overflow-y-auto max-h-[46vh] md:max-h-[39vh]"
           data-aos="fade-up"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full h-full">
@@ -155,7 +172,7 @@ export default function Houses() {
               <div
                 key={index}
                 id={`house-${house.numer}`}
-                className="flex flex-col justify-between bg-white p-4 rounded-lg shadow-md space-y-4"
+                className="flex flex-col justify-between bg-white p-4 rounded-lg shadow-md space-y-4 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
               >
                 <div>
                   <p className="text-[#344E41] text-xl font-semibold">
@@ -187,13 +204,15 @@ export default function Houses() {
 
                 <div className="mt-4">
                   <a
-                    className="w-full bg-[#588157] p-4 rounded-xl text-white flex justify-center items-center gap-2 hover:bg-[#3A5A40] transition-all duration-200"
+                    className="w-full bg-[#457b9d] p-4 rounded-xl text-white flex justify-center items-center gap-2 hover:bg-[#1d3557] transition-all duration-200 "
                     href={house.pdf}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaDownload className="w-5 h-5" />
-                    <span className="text-base">Szczegóły oferty</span>
+                    <FaDownload className="w-5 h-5 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]" />
+                    <span className="text-base drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]">
+                      Szczegóły oferty
+                    </span>
                   </a>
                 </div>
               </div>
