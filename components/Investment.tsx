@@ -13,7 +13,7 @@ export default function Investment() {
   return (
     <section
       id="investment"
-      className="w-full h-full flex flex-col items-center bg-gradient-to-b from-[#f1faee] to-[#a8dadc] relative scroll-mt-20"
+      className="w-full h-full flex flex-col items-center bg-gradient-to-b from-[#f1faee] to-[#a8dadc] relative scroll-mt-20 overflow-hidden"
     >
       <div className="flex items-center justify-center pt-10">
         <span
@@ -39,31 +39,44 @@ export default function Investment() {
       </div>
 
       <div className="flex flex-col lg:flex-row items-center justify-center pt-4 p-2 sm:px-10 gap-2 relative max-w-[1722px] overflow-hidden">
-        <div
-          className="lg:hidden relative  flex justify-center items-center overflow-hidden"
-          data-aos="fade-left"
-        >
-          <Image
-            src={isDay ? "/0001.png" : "/dobranowice_zmierzch.png"}
-            alt={isDay ? "Modern houses - day" : "Modern houses - night"}
-            layout="responsive"
-            objectFit="cover"
-            className="rounded-lg shadow-lg "
-            width={533}
-            height={400}
-            unoptimized
-            loading="lazy"
-          />
+        <div className="lg:hidden relative w-full mx-auto" data-aos="fade-left">
+          <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
+            <Image
+              src="/0001.png"
+              alt="Modern houses - day"
+              fill
+              className={`rounded-lg shadow-lg transition-opacity duration-700 ease-in-out ${
+                isDay ? "opacity-100" : "opacity-0"
+              }`}
+              style={{ objectFit: "cover" }}
+              unoptimized
+              loading="lazy"
+            />
+
+            <Image
+              src="/dobranowice_zmierzch.png"
+              alt="Modern houses - night"
+              fill
+              className={`rounded-lg shadow-lg transition-opacity duration-700 ease-in-out ${
+                !isDay ? "opacity-100" : "opacity-0"
+              }`}
+              style={{ objectFit: "cover" }}
+              unoptimized
+              loading="lazy"
+            />
+          </div>
+
           <button
-            className={`absolute bottom-4 w-28 h-auto bg-opacity-75 text-white px-4 py-2 rounded-md ${
+            className={`absolute bottom-4 left-1/2 -translate-x-1/2 w-28 h-auto bg-opacity-75 text-white px-4 py-2 rounded-md ${
               isDay ? "bg-[#457b9d]" : "bg-[#1d3557]"
             } transition-all duration-300 flex flex-row items-center justify-center gap-2`}
             onClick={toggleImage}
           >
-            {isDay ? <FaSun className="" /> : <FaMoon className="" />}
-            {isDay ? "Dzień" : "Noc"}
+            {isDay ? <FaSun /> : <FaMoon />}
+            {isDay ? "Dzień" : "Wieczór"}
           </button>
         </div>
+
         <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5">
           <div className="p-6 sm:p-8 lg:w-3/5 text-white" data-aos="fade-right">
             <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
@@ -115,28 +128,41 @@ export default function Investment() {
           </div>
         </div>
         <div
-          className="max-lg:hidden relative md:absolute md:w-1/3 max-w-[551px] max-h-[413px] md:-right-0 lg:mr-32 flex justify-center items-center -mt-20 md:mt-0"
+          className="max-lg:hidden relative md:absolute md:w-2/5 max-w-[551px] max-h-[413px] md:-right-0 lg:mr-12 flex justify-center items-center -mt-20 md:mt-0"
           data-aos="fade-left"
         >
           <Image
-            src={isDay ? "/0001.png" : "/dobranowice_zmierzch.png"}
-            alt={isDay ? "Modern houses - day" : "Modern houses - night"}
+            src="/0001.png"
+            alt="Modern houses - day"
             layout="responsive"
             objectFit="cover"
-            className="rounded-lg shadow-lg "
+            className={`rounded-lg shadow-lg absolute transition-opacity duration-700 ease-in-out ${
+              isDay ? "opacity-100" : "opacity-0"
+            }`}
             width={533}
             height={400}
             unoptimized
-            loading="lazy"
+          />
+          <Image
+            src="/dobranowice_zmierzch.png"
+            alt="Modern houses - night"
+            layout="responsive"
+            objectFit="cover"
+            className={`rounded-lg shadow-lg absolute transition-opacity duration-700 ease-in-out ${
+              !isDay ? "opacity-100" : "opacity-0"
+            }`}
+            width={533}
+            height={400}
+            unoptimized
           />
           <button
-            className={`absolute bottom-4 w-1/3 h-auto bg-opacity-75 text-white px-4 py-2 rounded-md ${
+            className={`absolute top-18 xl:top-24 w-1/3 h-auto bg-opacity-75 text-white px-4 py-2 rounded-md ${
               isDay ? "bg-[#457b9d]" : "bg-[#1d3557]"
             } transition-all duration-300 flex flex-row items-center justify-center gap-2`}
             onClick={toggleImage}
           >
             {isDay ? <FaSun /> : <FaMoon />}
-            {isDay ? "Dzień" : "Noc"}
+            {isDay ? "Dzień" : "Wieczór"}
           </button>
         </div>
       </div>
@@ -153,6 +179,7 @@ export default function Investment() {
             width={533}
             height={400}
             unoptimized
+            loading="lazy"
           />
         </div>
 
@@ -167,6 +194,7 @@ export default function Investment() {
             height={400}
             data-aos="fade-right"
             unoptimized
+            loading="lazy"
           />
         </div>
         <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 justify-end ">
@@ -224,6 +252,7 @@ export default function Investment() {
             width={533}
             height={400}
             unoptimized
+            loading="lazy"
           />
         </div>
         <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5">
@@ -290,6 +319,7 @@ export default function Investment() {
             height={400}
             data-aos="fade-left"
             unoptimized
+            loading="lazy"
           />
         </div>
       </div>
@@ -306,6 +336,7 @@ export default function Investment() {
             height={400}
             data-aos="fade-right"
             unoptimized
+            loading="lazy"
           />
         </div>
         <div className="lg:hidden relative flex justify-center items-center overflow-hidden">
@@ -319,6 +350,7 @@ export default function Investment() {
             width={533}
             height={400}
             unoptimized
+            loading="lazy"
           />
         </div>
         <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 justify-end ">
