@@ -13,7 +13,7 @@ export type HouseData = {
 
 export const houseData: HouseData[] = [
   {
-    pdf: "/kartyMieszkań/2.jpg",
+    pdf: "/kartyMieszkan/1.jpg",
     status: 0,
     dzialka: 5.71,
     cena: 1049000,
@@ -25,7 +25,7 @@ export const houseData: HouseData[] = [
     y: 59,
   },
   {
-    pdf: "/kartyMieszkań/2.jpg",
+    pdf: "/kartyMieszkan/1.jpg",
     status: 1,
     dzialka: 5.71,
     cena: 1049000,
@@ -37,7 +37,7 @@ export const houseData: HouseData[] = [
     y: 55,
   },
   {
-    pdf: "/kartyMieszkań/2.jpg",
+    pdf: "/kartyMieszkan/1.jpg",
     status: 2,
     dzialka: 5.71,
     cena: 1049000,
@@ -49,7 +49,7 @@ export const houseData: HouseData[] = [
     y: 52,
   },
   {
-    pdf: "/kartyMieszkań/2.jpg",
+    pdf: "/kartyMieszkan/1.jpg",
     status: 2,
     dzialka: 5.71,
     cena: 1049000,
@@ -61,7 +61,7 @@ export const houseData: HouseData[] = [
     y: 80,
   },
   {
-    pdf: "/kartyMieszkań/2.jpg",
+    pdf: "/kartyMieszkan/1.jpg",
     status: 2,
     dzialka: 5.71,
     cena: 1049000,
@@ -73,7 +73,7 @@ export const houseData: HouseData[] = [
     y: 74,
   },
   {
-    pdf: "/kartyMieszkań/2.jpg",
+    pdf: "/kartyMieszkan/1.jpg",
     status: 2,
     dzialka: 5.71,
     cena: 1049000,
