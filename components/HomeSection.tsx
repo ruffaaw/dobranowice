@@ -27,8 +27,6 @@ export default function HomeSection() {
         unoptimized
         priority
         style={{ objectFit: "cover", objectPosition: "center" }}
-        data-aos="fade-in"
-        data-aos-duration="2000"
         // onLoad={() => {
         //   setTimeout(() => setImageLoaded(true), 300);
         // }}
