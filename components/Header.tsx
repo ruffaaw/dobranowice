@@ -35,16 +35,21 @@ export default function Header() {
         }`}
       >
         <div
-          className="flex items-center w-56 pl-4"
+          className="flex items-center pl-4"
           data-aos="zoom-out"
           data-aos-duration="1000"
         >
-          <Link href="#home">
-            <img
+          <Link
+            href="#home"
+            className="font-bold text-3xl text-white drop-shadow-[2px_4px_4px_rgba(0,0,0,0.5)] text-center hover:scale-125"
+            style={{ fontFamily: "Montserrat, sans-serif" }}
+          >
+            Domy Dobranowice
+            {/* <img
               src="favicon.ico"
               alt="Logo"
               className="h-16 w-60 mr-2 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] object-contain"
-            />
+            /> */}
           </Link>
         </div>
 
