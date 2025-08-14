@@ -38,6 +38,7 @@ export default function Header() {
           className="flex items-center pl-4"
           data-aos="zoom-out"
           data-aos-duration="1000"
+          data-aos-delay="500"
         >
           <Link
             href="#home"
@@ -57,6 +58,7 @@ export default function Header() {
           className="hidden md:flex justify-center space-x-7 lg:space-x-14 md:text-lg lg:text-xl w-dvw items-center"
           data-aos="zoom-out"
           data-aos-duration="1000"
+          data-aos-delay="500"
         >
           <Link
             href="#investment"
@@ -87,6 +89,7 @@ export default function Header() {
           className="w-1/6 flex justify-end"
           data-aos="zoom-out"
           data-aos-duration="1000"
+          data-aos-delay="500"
         >
           <nav
             className={`max-md:hidden md:text-lg lg:text-xl bg-[#457b9d] p-3  rounded-2xl w-40 text-center hover:bg-[#e63946] ${
@@ -109,6 +112,7 @@ export default function Header() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           data-aos="zoom-out"
           data-aos-duration="1000"
+          data-aos-delay="500"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
