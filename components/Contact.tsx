@@ -125,12 +125,22 @@ export default function Contact() {
             data-aos-duration="800"
           ></span>
         </div>
-        <p className="text-lg md:text-3xl font-bold text-[#457b9d] pt-3">
+        <p
+          className="text-lg md:text-3xl font-bold text-[#457b9d] pt-3"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="800"
+        >
           Masz jakieś pytania? Zainteresowała Cię nasza oferta? Zapraszamy
           serdecznie do kontaktu.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 w-full">
-          <div className="w-full flex items-stretch">
+          <div
+            className="w-full flex items-stretch"
+            data-aos="fade-down"
+            data-aos-delay="200"
+            data-aos-duration="800"
+          >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3194.8443747714277!2d20.140027999999997!3d50.013461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTDCsDAwJzQ4LjUiTiAyMMKwMDgnMjQuMSJF!5e1!3m2!1spl!2spl!4v1735824868741!5m2!1spl!2spl"
               frameBorder="0"
@@ -138,7 +148,12 @@ export default function Contact() {
             ></iframe>
           </div>
 
-          <div className="w-full flex items-stretch">
+          <div
+            className="w-full flex items-stretch"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="800"
+          >
             <form
               onSubmit={handleSubmit}
               className="bg-white shadow-lg rounded-lg p-6 flex-grow flex flex-col"
@@ -250,6 +265,9 @@ export default function Contact() {
             target="_blank"
             rel="noopener noreferrer"
             className="flex justify-center"
+            data-aos="fade-down"
+            data-aos-delay="200"
+            data-aos-duration="800"
           >
             <Image
               src="/n20logoCzarne.png"
@@ -258,7 +276,12 @@ export default function Contact() {
               height={160}
             />
           </a>
-          <div className="text-left font-bold text-black max-w-md">
+          <div
+            className="text-left font-bold text-black max-w-md"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="800"
+          >
             <h2 className="text-xl md:text-2xl mb-3">
               Kontakt biura nieruchomości
             </h2>
