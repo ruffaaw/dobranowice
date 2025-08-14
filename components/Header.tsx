@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,24 +39,20 @@ export default function Header() {
           className="flex items-center pl-4"
           data-aos="zoom-out"
           data-aos-duration="1000"
-          data-aos-delay="500"
         >
-          <Link
-            href="#home"
-            className="font-bold text-3xl text-white drop-shadow-[2px_4px_4px_rgba(0,0,0,0.5)] text-center hover:scale-125"
-            style={{ fontFamily: "Montserrat, sans-serif" }}
-          >
-            Domy Dobranowice
-            {/* <img
-              src="favicon.ico"
-              alt="Logo"
-              className="h-16 w-60 mr-2 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] object-contain"
-            /> */}
+          <Link href="#home" className="max-md:max-w-[150px]">
+            <Image
+              src="/logo.png"
+              alt="Logo Dobranowice"
+              width={300}
+              height={50}
+              className="mr-2 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] hover:scale-125"
+            />
           </Link>
         </div>
 
         <nav
-          className="hidden md:flex justify-center space-x-7 lg:space-x-14 md:text-lg lg:text-xl w-dvw items-center"
+          className="hidden md:flex justify-center space-x-7 lg:space-x-14 md:text-lg lg:text-xl w-dvw items-center h-24"
           data-aos="zoom-out"
           data-aos-duration="1000"
           data-aos-delay="500"
@@ -132,7 +129,7 @@ export default function Header() {
       </div>
 
       {isMenuOpen && (
-        <div className="fixed flex flex-col items-center top-24 bg-[#1d3557]  shadow-md z-30 w-screen h-auto">
+        <div className="fixed flex flex-col items-center bg-[#1d3557]  shadow-md z-30 w-screen h-auto">
           <Link
             href="#investment"
             className="text-white text-xl w-full py-5 flex justify-center hover:bg-[#457b9d] drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] font-bold"
