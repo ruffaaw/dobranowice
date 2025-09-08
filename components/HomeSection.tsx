@@ -28,8 +28,8 @@ export default function HomeSection() {
         }`}
       >
         <Image
-          src="/dron_z _cienia.jpg"
-          alt="Nowoczesne osiedle mieszkaniowe Pułaskiego 32 w Wieliczce"
+          src="/dron_nowy2.webp"
+          alt="Zdjęcie w tle Domy Dobranowice"
           fill
           quality={100}
           unoptimized
@@ -41,22 +41,26 @@ export default function HomeSection() {
         />
         {imageLoaded && (
           <>
-            <p
-              className="text-3xl md:text-5xl text-white font-bold mb-6 text-center drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
+            <div
               data-aos="fade-up"
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              TWÓJ WYMARZONY DOM
-            </p>
-            <p
-              className="text-3xl md:text-5xl text-white font-bold text-center drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
-              data-aos="fade-up"
-              data-aos-delay="700"
-              data-aos-duration="1000"
-            >
-              W IDEALNEJ LOKALIZACJI.
-            </p>
+              <Image
+                src={"/logo.png"}
+                quality={100}
+                unoptimized
+                priority
+                style={{
+                  objectFit: "cover",
+                  objectPosition: "center",
+                  zIndex: 30,
+                }}
+                alt="Logo Domy Dobranowice"
+                width={700}
+                height={300}
+              />
+            </div>
             <div className="flex max-md:flex-col max-md:space-y-5 max-md:w-full max-md:items-center md:space-x-10 mt-8">
               <Link
                 className="py-3 w-56 max-md:w-3/5 bg-[#457b9d] text-white rounded-2xl hover:bg-[#1d3557] hover:text-white font-semibold transition break-words max-w-full text-center drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"

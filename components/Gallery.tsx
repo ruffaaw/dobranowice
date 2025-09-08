@@ -8,13 +8,13 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 export default function Gallery() {
   const galleryImages = [
-    "/0001.png",
-    "/0002.png",
-    "/0003.png",
-    "/dobranowice_dron.jpg",
-    "/dobranowice_zmierzch_2.png",
-    "/dobranowice_zmierzch.png",
-    "/dron_z _cienia.jpg",
+    "/0001.webp",
+    "/0002.webp",
+    "/0003.webp",
+    "/dobranowice_zmierzch_2.webp",
+    "/dobranowice_zmierzch.webp",
+    "/dron_nowy1.webp",
+    "/dron_nowy2.webp",
   ];
 
   return (

@@ -1,68 +1,57 @@
 import {
-  FaMapPin,
-  FaTree,
-  FaCouch,
-  FaHeart,
-  FaSolarPanel,
-  FaLock,
+  FaShoppingCart,
+  FaGraduationCap,
+  FaBus,
+  FaTheaterMasks,
+  FaHospital,
+  FaLeaf,
 } from "react-icons/fa";
-import { FaTemperatureHalf, FaHouseChimneyWindow } from "react-icons/fa6";
 export default function Profits() {
   const profitItems = [
     {
-      icon: <FaMapPin className="text-[#e63946] text-5xl " />,
-      title: "Blisko Krakowa i pełnej infrastruktury miejskiej",
+      icon: <FaShoppingCart className="text-[#e63946] text-5xl" />,
+      title: "Zakupy",
       description:
-        "Dogodna lokalizacja w pobliżu Krakowa i kluczowych miejsc, z łatwym dostępem do autostrady.",
+        "Codzienne zakupy zrobisz wygodnie w pobliskiej Wieliczce – supermarkety, sklepy osiedlowe i lokalne punkty usługowe. W samej miejscowości dostępne są także mniejsze sklepy spożywcze.",
       delay: 0,
     },
     {
-      icon: <FaTree className="text-[#e63946] text-5xl" />,
-      title: "Spokój i natura z dala od miejskiego zgiełku",
-      description: "Zielona okolica łącząca ciszę i wygodę.",
+      icon: <FaGraduationCap className="text-[#e63946] text-5xl" />,
+      title: "Edukacja",
+      description:
+        "W Dobranowicach i okolicy działają przedszkola i szkoły podstawowe. W Wieliczce znajdziesz szkoły średnie i prywatne placówki edukacyjne – szybki dojazd ułatwia codzienną organizację.",
       delay: 100,
     },
     {
-      icon: <FaCouch className="text-[#e63946] text-5xl" />,
-      title: "Przestronne wnętrza i nowoczesne rozwiązania architektoniczne",
-      description: "Domy z przestronnymi pokojami i funkcjonalnym układem.",
+      icon: <FaBus className="text-[#e63946] text-5xl" />,
+      title: "Transport",
+      description:
+        "Dogodny dojazd do Wieliczki i Krakowa – kilka minut do autostrady A4 i DK94. W pobliżu kursują także linie autobusowe, które ułatwiają komunikację.",
       delay: 200,
     },
     {
-      icon: <FaHeart className="text-[#e63946] text-5xl " />,
-      title: "Prywatne, ogrodzone działki",
-      description: "Działki zapewniające prywatność i przestrzeń do relaksu.",
+      icon: <FaTheaterMasks className="text-[#e63946] text-5xl" />,
+      title: "Rozrywka",
+      description:
+        "Kraków i Wieliczka oferują kina, teatry, restauracje i atrakcje turystyczne, takie jak Kopalnia Soli czy Tężnia Solankowa – idealne na czas wolny.",
       delay: 300,
     },
     {
-      icon: <FaSolarPanel className="text-[#e63946] text-5xl" />,
-
-      title: "Pompa ciepła, rekuperacja, przygotowanie pod fotowoltaikę",
-      description: "Energooszczędne technologie redukujące koszty.",
+      icon: <FaHospital className="text-[#e63946] text-5xl" />,
+      title: "Usługi",
+      description:
+        "W Wieliczce znajdziesz przychodnie, apteki, banki i inne punkty usługowe – codzienne sprawy załatwisz szybko i wygodnie.",
       delay: 400,
     },
     {
-      icon: <FaTemperatureHalf className="text-[#e63946] text-5xl" />,
-      title: "Wysoka izolacja termiczna",
+      icon: <FaLeaf className="text-[#e63946] text-5xl" />,
+      title: "Rekreacja",
       description:
-        "Ściany o wyjątkowej izolacji, gwarantujące oszczędność energii.",
+        "Dobranowice to spokojna, zielona okolica z trasami spacerowymi i rowerowymi. Własny ogród i taras to dodatkowa przestrzeń do relaksu.",
       delay: 500,
     },
-    {
-      icon: <FaLock className="text-[#e63946] text-5xl" />,
-      title: "Zamknięty teren",
-      description: "Ogrodzona przestrzeń z przesuwaną bramą wjazdową i furtką.",
-      delay: 600,
-    },
-    {
-      icon: <FaHouseChimneyWindow className="text-[#e63946] text-5xl" />,
-
-      title: "Elektryczne rolety",
-      description:
-        "Rolety podtynkowe sterowane elektrycznie dla większego bezpieczeństwa i wygody.",
-      delay: 700,
-    },
   ];
+
   return (
     <section
       id="profits"
@@ -92,7 +81,7 @@ export default function Profits() {
       </div>
 
       <div className="flex w-full h-full flex-col p-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {profitItems.map((item, index) => (
             <div
               key={index}

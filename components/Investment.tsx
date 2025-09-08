@@ -38,11 +38,11 @@ export default function Investment() {
         ></span>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center justify-center pt-4 p-2 sm:px-10 gap-2 relative max-w-[1722px] overflow-hidden">
+      <div className="flex flex-col lg:flex-row items-center justify-center pt-4 p-2 sm:px-10 gap-2 relative max-w-[1722px] overflow-hidden w-full">
         <div className="lg:hidden relative w-full mx-auto" data-aos="fade-left">
           <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
             <Image
-              src="/0001.png"
+              src="/0001.webp"
               alt="Modern houses - day"
               fill
               className={`rounded-lg shadow-lg transition-opacity duration-700 ease-in-out ${
@@ -54,7 +54,7 @@ export default function Investment() {
             />
 
             <Image
-              src="/dobranowice_zmierzch.png"
+              src="/dobranowice_zmierzch.webp"
               alt="Modern houses - night"
               fill
               className={`rounded-lg shadow-lg transition-opacity duration-700 ease-in-out ${
@@ -77,54 +77,20 @@ export default function Investment() {
           </button>
         </div>
 
-        <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5">
+        <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 lg:p-10">
           <div className="p-6 sm:p-8 lg:w-3/5 text-white" data-aos="fade-right">
             <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
-              Lokalizacja inwestycji
+              Komfort i prywatność każdego dnia
             </h2>
             <p className="text-base sm:text-lg mb-4 sm:mb-6">
-              Inwestycja <strong>Domy przy Brzozowej</strong> położona jest w
-              doskonałej lokalizacji, zapewniając szybki dostęp do głównych
-              punktów Krakowa i okolicznych miast. Zjazd z autostrady A4 w
-              odległości 1,2 km sprawia, że podróże są wygodne, a przystanek MPK
-              w odległości 700 metrów umożliwia łatwy dostęp do komunikacji
-              miejskiej.
+              Osiedle w Dobranowicach to kameralny kompleks domów
+              jednorodzinnych, zaprojektowanych z myślą o wygodzie, prywatności
+              i bezpieczeństwie mieszkańców. Każdy budynek posiada własny ogród,
+              miejsce postojowe i dostęp do drogi wewnętrznej wykonanej z kostki
+              brukowej. Ogrodzenie panelowe z bramą przesuwną zapewnia poczucie
+              prywatności, a nowoczesna architektura łączy funkcjonalność z
+              elegancką formą.
             </p>
-            <div className="mb-4 sm:mb-6">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">
-                Odległości do miast
-              </h3>
-              <ul className="list-disc list-inside text-base sm:text-lg ml-4 sm:ml-6">
-                <li>Kraków – 25 km (do centrum), 4,5 km (do granic miasta)</li>
-                <li>Niepołomice - 5 km</li>
-                <li>Wieliczka - 6,5 km</li>
-              </ul>
-            </div>
-            <div className="mb-4 sm:mb-6">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">
-                Wygoda codzienna
-              </h3>
-              <p className="text-base sm:text-lg">
-                W pobliżu <strong>Domów przy Brzozowej</strong> znajdują się
-                szkoły, sklepy, restauracje oraz tereny zielone, co sprawia, że
-                ta lokalizacja jest idealnym miejscem do życia. Bliskość do
-                wszystkich udogodnień zapewnia komfort codziennego
-                funkcjonowania.
-              </p>
-            </div>
-            <div className="flex justify-center">
-              <button
-                className="bg-[#1d3557] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md hover:bg-[#e63946] transition font-semibold cursor-pointer"
-                onClick={() =>
-                  window.open(
-                    "https://maps.app.goo.gl/KssHA4FVSg5khjQi8",
-                    "_blank"
-                  )
-                }
-              >
-                Zobacz na mapie
-              </button>
-            </div>
           </div>
         </div>
         <div
@@ -132,7 +98,7 @@ export default function Investment() {
           data-aos="fade-left"
         >
           <Image
-            src="/0001.png"
+            src="/0001.webp"
             alt="Modern houses - day"
             layout="responsive"
             objectFit="cover"
@@ -144,7 +110,7 @@ export default function Investment() {
             unoptimized
           />
           <Image
-            src="/dobranowice_zmierzch.png"
+            src="/dobranowice_zmierzch.webp"
             alt="Modern houses - night"
             layout="responsive"
             objectFit="cover"
@@ -167,11 +133,13 @@ export default function Investment() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center justify-center p-2 sm:px-10 gap-2 relative max-w-[1722px]">
-        <div className="lg:hidden relative flex justify-center items-center overflow-hidden">
+      <div className="flex flex-col lg:flex-row items-center justify-center p-2 sm:px-10 gap-2 relative max-w-[1722px] w-full">
+        <div
+          className="max-lg:hidden relative md:absolute md:w-2/5 max-w-[551px] max-h-[413px] md:-left-0 lg:ml-12 flex justify-center items-center -mt-20 md:mt-0"
+          data-aos="fade-right"
+        >
           <Image
-            data-aos="fade-right"
-            src="/0002.png"
+            src="/0002.webp"
             alt="Modern houses"
             layout="responsive"
             objectFit="cover"
@@ -183,230 +151,219 @@ export default function Investment() {
           />
         </div>
 
-        <div className=" max-lg:hidden max-w-[450px] max-h-[413px] relative md:absolute md:w-3/10 lg:-left-0 lg:ml-32 flex justify-center items-center -mt-20 md:mt-0">
+        <div
+          className="lg:hidden relative flex justify-center items-center overflow-hidden"
+          data-aos="fade-right"
+        >
           <Image
-            src="/0002.png"
+            src="/0002.webp"
             alt="Modern houses"
             layout="responsive"
             objectFit="cover"
-            className="rounded-lg shadow-lg w-full"
+            className="rounded-lg shadow-lg"
             width={533}
             height={400}
-            data-aos="fade-right"
             unoptimized
             loading="lazy"
           />
         </div>
-        <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 justify-end ">
+
+        <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 justify-start lg:justify-end lg:p-10">
           <div className="p-6 sm:p-8 lg:w-3/5 text-white" data-aos="fade-left">
             <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 ">
-              Własność i prywatność
+              Ekologia w standardzie
             </h2>
-            <div className="mb-4 sm:mb-6">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 ">
-                Pełna własność działki
-              </h3>
-              <p className="text-base sm:text-lg ">
-                W <strong>Domach przy Brzozowej</strong> działka jest w pełni
-                własnością przyszłych mieszkańców. Zarówno budynek, jak i teren
-                są objęte prawem własności w 100%, co zapewnia pełną kontrolę
-                nad nieruchomością.
-              </p>
-            </div>
-
-            <div className="mb-4 sm:mb-6 ">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 ">
-                Bezpieczeństwo i prywatność
-              </h3>
-              <p className="text-base sm:text-lg ">
-                Otoczenie działki zostało w pełni ogrodzone z każdej strony, co
-                zapewnia poczucie bezpieczeństwa oraz prywatności dla
-                mieszkańców.
-              </p>
-            </div>
-
-            <div className="mb-4 sm:mb-6 ">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 ">
-                Strefa tarasowo-ogrodowa
-              </h3>
-              <p className="text-base sm:text-lg ">
-                Każdy dom posiada przestronną strefę tarasowo-ogrodową o
-                powierzchni ok 400 m². Umiejscowienie tarasu biegunowo względem
-                sąsiedniego budynku maksymalizuje prywatność i zapewnia
-                komfortową przestrzeń do wypoczynku.
-              </p>
-            </div>
+            <p className="text-base sm:text-lg">
+              Domy w Dobranowicach powstają w oparciu o wysokie standardy
+              izolacji termicznej i ekologiczne technologie.
+            </p>
+            <ul className="list-disc list-inside text-base sm:text-lg space-y-2">
+              <li>
+                Ogrzewanie podłogowe w całym budynku zasilane pompą ciepła
+              </li>
+              <li>Okna trzyszybowe o doskonałych parametrach izolacyjnych</li>
+              <li>Hydroizolacje fundamentów i balkonów</li>
+              <li>
+                Gruba warstwa ocieplenia ścian (20 cm styropian EPS) i dachu
+                (piana Icynene)
+              </li>
+              <li>Możliwość podłączenia światłowodu</li>
+            </ul>
+            <p className="text-base sm:text-lg">
+              Dzięki temu domy są energooszczędne, ciepłe zimą i przyjemnie
+              chłodne latem, co przekłada się na niższe koszty utrzymania i
+              komfort codziennego życia.
+            </p>
           </div>
         </div>
       </div>
 
       <div className="flex flex-col lg:flex-row items-center justify-center p-2 sm:px-10 gap-2 relative max-w-[1722px]">
-        <div className="lg:hidden relative flex justify-center items-center overflow-hidden">
+        <div
+          className="max-lg:hidden relative md:absolute md:w-2/5 max-w-[551px] max-h-[413px] md:-right-0 lg:mr-12 flex justify-center items-center -mt-20 md:mt-0"
+          data-aos="fade-left"
+        >
           <Image
-            data-aos="fade-left"
-            src="/0003.png"
+            src="/0003.webp"
             alt="Modern houses"
             layout="responsive"
             objectFit="cover"
-            className="rounded-lg shadow-lg w-full"
+            className="rounded-lg shadow-lg"
             width={533}
             height={400}
             unoptimized
             loading="lazy"
           />
         </div>
-        <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5">
+        <div
+          className="lg:hidden relative flex justify-center items-center overflow-hidden"
+          data-aos="fade-left"
+        >
+          <Image
+            src="/0003.webp"
+            alt="Modern houses"
+            layout="responsive"
+            objectFit="cover"
+            className="rounded-lg shadow-lg"
+            width={533}
+            height={400}
+            unoptimized
+            loading="lazy"
+          />
+        </div>
+        <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 lg:p-10">
           <div className="p-6 sm:p-8 lg:w-3/5 text-white" data-aos="fade-right">
             <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
-              Architektura i funkcjonalność
+              Funkcjonalna przestrzeń dla całej rodziny
             </h2>
-
-            <div className="mb-4 sm:mb-6">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">
-                Przestronność i komfort
-              </h3>
-              <p className="text-base sm:text-lg">
-                W <strong>Domach przy Brzozowej</strong> zaprojektowano dużą,
-                przeszkloną strefę dzienną z&nbsp;bezpośrednim wyjściem do
-                ogrodu. Dzięki temu wnętrza są doskonale doświetlone naturalnym
-                światłem, a przestronność pomieszczeń wpływa na komfort
-                codziennego życia.
-              </p>
-            </div>
-
-            <div className="mb-4 sm:mb-6">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">
-                Dodatkowy pokój na parterze
-              </h3>
-              <p className="text-base sm:text-lg">
-                Na parterze znajduje się dodatkowy pokój, który może pełnić
-                funkcję biura, gabinetu lub miejsca do pracy zdalnej – doskonale
-                wpisując się w nowoczesny styl życia.
-              </p>
-            </div>
-
-            <div className="mb-4 sm:mb-6">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">
-                Sypialnie i przestronność
-              </h3>
-              <p className="text-base sm:text-lg">
-                Na piętrze znajdują się trzy pełnowymiarowe sypialnie (brak
-                skosów), co zapewnia wygodę i&nbsp;przestronność. Dodatkowo,
-                znajduje się tam również przestronna łazienka, która zwiększa
-                komfort użytkowania.
-              </p>
-            </div>
-
-            <div className="mb-4 sm:mb-6">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">
-                Możliwości adaptacji dachu
-              </h3>
-              <p className="text-base sm:text-lg">
-                Dach można zaadaptować jako idealną przestrzeń do zamontowania
-                paneli fotowoltaicznych, co jest dodatkowym atutem.
-              </p>
-            </div>
+            <p className="text-base sm:text-lg mb-4 sm:mb-6">
+              Każdy dom charakteryzuje się przemyślanym układem pomieszczeń,
+              dużymi przeszkleniami i wygodnym wyjściem do własnego ogrodu.
+              Jasne, dobrze doświetlone wnętrza sprzyjają zarówno relaksowi, jak
+              i pracy zdalnej. Zastosowane materiały – m.in. stolarka WIŚNIOWSKI
+              czy bramy Uni Therm – gwarantują trwałość, estetykę i komfort.
+            </p>
           </div>
-        </div>
-        <div className="max-lg:hidden max-w-[551px] max-h-[413px] relative md:absolute md:w-1/3 md:-right-0 lg:mr-32 flex justify-center items-center -mt-20 md:mt-0">
-          <Image
-            src="/0003.png"
-            alt="Modern houses"
-            layout="responsive"
-            objectFit="cover"
-            className="rounded-lg shadow-lg w-full"
-            width={533}
-            height={400}
-            data-aos="fade-left"
-            unoptimized
-            loading="lazy"
-          />
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center justify-center p-2 sm:px-10 sm:pb-10 gap-2 relative max-w-[1722px]">
-        <div className="max-lg:hidden max-w-[551px] max-h-[413px] relative md:absolute md:w-3/10 lg:-left-0 lg:ml-32 flex justify-center items-center -mt-20 md:mt-0">
+      <div className="flex flex-col lg:flex-row items-center justify-center p-2 sm:px-10 gap-2 relative max-w-[1722px] w-full">
+        <div
+          className="max-lg:hidden relative md:absolute md:w-2/5 max-w-[551px] max-h-[413px] md:-left-0 lg:ml-12 flex justify-center items-center -mt-20 md:mt-0"
+          data-aos="fade-right"
+        >
           <Image
-            src="/dobranowice_zmierzch_2.png"
+            src="/dobranowice_zmierzch_2.webp"
             alt="Modern houses"
             layout="responsive"
             objectFit="cover"
-            className="rounded-lg shadow-lg w-full"
-            width={533}
-            height={400}
-            data-aos="fade-right"
-            unoptimized
-            loading="lazy"
-          />
-        </div>
-        <div className="lg:hidden relative flex justify-center items-center overflow-hidden">
-          <Image
-            data-aos="fade-right"
-            src="/dobranowice_zmierzch_2.png"
-            alt="Modern houses"
-            layout="responsive"
-            objectFit="cover"
-            className="rounded-lg shadow-lg w-full"
+            className="rounded-lg shadow-lg"
             width={533}
             height={400}
             unoptimized
             loading="lazy"
           />
         </div>
-        <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 justify-end ">
+
+        <div
+          className="lg:hidden relative flex justify-center items-center overflow-hidden"
+          data-aos="fade-right"
+        >
+          <Image
+            src="/dobranowice_zmierzch_2.webp"
+            alt="Modern houses"
+            layout="responsive"
+            objectFit="cover"
+            className="rounded-lg shadow-lg"
+            width={533}
+            height={400}
+            unoptimized
+            loading="lazy"
+          />
+        </div>
+        <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 justify-end lg:p-10">
           <div className="p-6 sm:p-8 lg:w-3/5 text-white" data-aos="fade-left">
             <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 ">
-              Standard deweloperski Premium
+              Lokalizacja, która daje więcej
             </h2>
-
-            <div className="mb-4 sm:mb-6">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 ">
-                Wysoka jakość wykonania
-              </h3>
-              <p className="text-base sm:text-lg ">
-                <strong>Domy przy Brzozowej</strong> oferują standard Premium,
-                który gwarantuje najwyższą jakość wykonania oraz zastosowanie
-                nowoczesnych technologii. Każdy dom został zaprojektowany z
-                dbałością o szczegóły, aby zapewnić komfort i funkcjonalność na
-                najwyższym poziomie.
-              </p>
+            <p className="text-base sm:text-lg">
+              Dobranowice to spokojna miejscowość położona tuż obok Wieliczki, z
+              szybkim dojazdem do Krakowa. Mieszkańcy mają dostęp do:
+            </p>
+            <ul className="list-disc list-inside text-base sm:text-lg space-y-2 mb-4">
+              <li>Sklepy i punkty usługowe w pobliskiej Wieliczce</li>
+              <li>Szkoły i przedszkola w okolicy</li>
+              <li>Tereny zielone i trasy spacerowe</li>
+              <li>Atrakcje kulturalne w Krakowie i Wieliczce</li>
+            </ul>
+            <p className="text-base sm:text-lg">
+              Dobranowice to spokojna miejscowość z szybkim dojazdem do Krakowa
+              – idealne miejsce, które łączy bliskość miasta ze spokojem natury.
+            </p>
+            <div className="flex justify-center mt-4">
+              <button
+                className="bg-[#1d3557] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md hover:bg-[#e63946] transition font-semibold cursor-pointer"
+                onClick={() =>
+                  window.open(
+                    "https://maps.app.goo.gl/KssHA4FVSg5khjQi8",
+                    "_blank"
+                  )
+                }
+              >
+                Zobacz na mapie
+              </button>
             </div>
-
-            <div className="mb-4 sm:mb-6">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 ">
-                Pompowanie ciepła i wentylacja
-              </h3>
-              <p className="text-base sm:text-lg ">
-                Domy są wyposażone w pompę ciepła oraz wentylację mechaniczną
-                (rekuperację), co zapewnia energooszczędność oraz komfort
-                cieplny przez cały rok.
-              </p>
-            </div>
-
-            <div className="mb-4 sm:mb-6">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 ">
-                Okna, rolety i brama
-              </h3>
-              <p className="text-base sm:text-lg ">
-                Okna tarasowe typu HST/Slide oraz elektrycznie sterowane rolety
-                podtynkowe podnoszą funkcjonalność i estetykę wnętrz, a
-                przesuwana brama wjazdowa z furtką zapewnia wygodny dostęp do
-                nieruchomości.
-              </p>
-            </div>
-
-            <div className="mb-4 sm:mb-6">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 ">
-                Izolacja termiczna i instalacje
-              </h3>
-              <p className="text-base sm:text-lg ">
-                Budynki zostały zaprojektowane z bardzo dobrą izolacją termiczną
-                (ściany z pustaka ceramicznego 30 cm + styropian 20 cm), co
-                zapewnia komfort cieplny. Dodatkowo instalacje są przygotowane
-                pod klimatyzację i fotowoltaikę, co podnosi standard użytkowy
-                domu.
-              </p>
-            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col lg:flex-row items-center justify-center p-2 sm:px-10 gap-2 relative max-w-[1722px] w-full">
+        <div
+          className="max-lg:hidden relative md:absolute md:w-2/5 max-w-[551px] max-h-[413px] md:-right-0 lg:mr-12 flex justify-center items-center -mt-20 md:mt-0"
+          data-aos="fade-left"
+        >
+          <Image
+            src="/dron_nowy2.webp"
+            alt="Modern houses"
+            layout="responsive"
+            objectFit="cover"
+            className="rounded-lg shadow-lg"
+            width={533}
+            height={400}
+            unoptimized
+            loading="lazy"
+          />
+        </div>
+        <div
+          className="lg:hidden relative flex justify-center items-center overflow-hidden"
+          data-aos="fade-left"
+        >
+          <Image
+            src="/dron_nowy2.webp"
+            alt="Modern houses"
+            layout="responsive"
+            objectFit="cover"
+            className="rounded-lg shadow-lg"
+            width={533}
+            height={400}
+            unoptimized
+            loading="lazy"
+          />
+        </div>
+        <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 lg:p-10">
+          <div className="p-6 sm:p-8 lg:w-3/5 text-white" data-aos="fade-right">
+            <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
+              Idealne miejsce dla Ciebie
+            </h2>
+            <ul className="list-disc list-inside text-base sm:text-lg space-y-2 mb-4">
+              <li>Spokojna, zielona okolica w sąsiedztwie Wieliczki,</li>
+              <li>Nowoczesne technologie i wysoki standard wykonania,</li>
+              <li>Ogrzewanie podłogowe i pompy ciepła w standardzie,</li>
+              <li>Przestronne wnętrza z prywatnym ogrodem.</li>
+            </ul>
+            <p className="text-base sm:text-lg">
+              <strong>Osiedle Dobranowice</strong> – dom, w którym znajdziesz
+              spokój, przestrzeń i wygodę, nie rezygnując z bliskości miasta.
+            </p>
           </div>
         </div>
       </div>

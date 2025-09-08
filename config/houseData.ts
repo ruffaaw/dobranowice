@@ -21,8 +21,8 @@ export const houseData: HouseData[] = [
     metraz: 145.45,
     Id: "dom1",
     pokoje: 5,
-    x: 34,
-    y: 59,
+    x: 32,
+    y: 50,
   },
   {
     pdf: "/kartyMieszkan/1.jpg",
@@ -34,7 +34,7 @@ export const houseData: HouseData[] = [
     Id: "dom2",
     pokoje: 5,
     x: 43,
-    y: 55,
+    y: 45,
   },
   {
     pdf: "/kartyMieszkan/1.jpg",
@@ -45,8 +45,8 @@ export const houseData: HouseData[] = [
     metraz: 145.45,
     Id: "dom3",
     pokoje: 5,
-    x: 50,
-    y: 52,
+    x: 52,
+    y: 41,
   },
   {
     pdf: "/kartyMieszkan/1.jpg",
@@ -57,8 +57,8 @@ export const houseData: HouseData[] = [
     metraz: 145.45,
     Id: "dom4",
     pokoje: 5,
-    x: 52.5,
-    y: 80,
+    x: 52,
+    y: 73,
   },
   {
     pdf: "/kartyMieszkan/1.jpg",
@@ -69,8 +69,8 @@ export const houseData: HouseData[] = [
     metraz: 145.45,
     Id: "dom5",
     pokoje: 5,
-    x: 61,
-    y: 74,
+    x: 63,
+    y: 66,
   },
   {
     pdf: "/kartyMieszkan/1.jpg",
@@ -81,7 +81,7 @@ export const houseData: HouseData[] = [
     metraz: 145.45,
     Id: "dom6",
     pokoje: 5,
-    x: 68,
-    y: 69,
+    x: 71,
+    y: 59,
   },
 ];

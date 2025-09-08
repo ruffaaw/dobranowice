@@ -126,7 +126,7 @@ export default function Houses() {
         <div className="w-full md:w-[55%] flex justify-center md:justify-start items-start relative ">
           <div className="w-full relative">
             <Image
-              src="/dobranowice_dron.jpg"
+              src="/dron_nowy1.webp"
               alt="Estate"
               layout="responsive"
               objectFit="cover"
