@@ -39,10 +39,10 @@ export default function HomeSection() {
             setTimeout(() => setImageLoaded(true), 300);
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 via-20% to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-black/70 via-black/40 via-20% to-transparent z-10" />
 
         {imageLoaded && (
-          <div className="absolute max-sm:bottom-10 sm:top-1/2 left-6 sm:left-12 lg:left-24 z-20 w-full sm:max-w-xl text-center sm:text-left sm:transform sm:-translate-y-1/2">
+          <div className="absolute max-sm:bottom-10 sm:top-1/2 sm:left-12 lg:left-24 z-20 w-full sm:max-w-xl text-center sm:text-left sm:transform sm:-translate-y-1/2">
             <h1 className="text-white text-3xl sm:text-5xl lg:text-6xl font-bold leading-snug drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
               Nowoczesne osiedle domów <br /> w sąsiedztwie Wieliczki <br />
               <span className="text-[#457b9d]">Twój azyl spokoju</span> blisko
