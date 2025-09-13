@@ -78,18 +78,22 @@ export default function Investment() {
         </div>
 
         <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 lg:p-10">
-          <div className="p-6 sm:p-8 lg:w-3/5 text-white" data-aos="fade-right">
-            <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
+          <div
+            className="p-6 sm:p-8 lg:w-3/5 text-white space-y-4 sm:space-y-6"
+            data-aos="fade-right"
+          >
+            <h2 className="text-xl sm:text-2xl font-bold">
               Komfort i prywatność każdego dnia
             </h2>
             <p className="text-base sm:text-lg mb-4 sm:mb-6">
               Osiedle w Dobranowicach to kameralny kompleks domów
-              jednorodzinnych, zaprojektowanych z myślą o wygodzie, prywatności
-              i bezpieczeństwie mieszkańców. Każdy budynek posiada własny ogród,
-              miejsce postojowe i dostęp do drogi wewnętrznej wykonanej z kostki
-              brukowej. Ogrodzenie panelowe z bramą przesuwną zapewnia poczucie
-              prywatności, a nowoczesna architektura łączy funkcjonalność z
-              elegancką formą.
+              jednorodzinnych, zaprojektowanych z&nbsp;myślą o&nbsp;wygodzie,
+              prywatności i&nbsp;bezpieczeństwie mieszkańców. Każdy budynek
+              posiada własny ogród, miejsce postojowe i&nbsp;dostęp do drogi
+              wewnętrznej wykonanej z&nbsp;kostki brukowej. Ogrodzenie panelowe
+              z&nbsp;bramą przesuwną zapewnia poczucie prywatności,
+              a&nbsp;nowoczesna architektura łączy funkcjonalność
+              z&nbsp;elegancką formą.
             </p>
           </div>
         </div>
@@ -169,30 +173,35 @@ export default function Investment() {
         </div>
 
         <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 justify-start lg:justify-end lg:p-10">
-          <div className="p-6 sm:p-8 lg:w-3/5 text-white" data-aos="fade-left">
-            <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 ">
+          <div
+            className="p-6 sm:p-8 lg:w-3/5 text-white space-y-4 sm:space-y-6"
+            data-aos="fade-left"
+          >
+            <h2 className="text-xl sm:text-2xl font-bold">
               Ekologia w standardzie
             </h2>
             <p className="text-base sm:text-lg">
-              Domy w Dobranowicach powstają w oparciu o wysokie standardy
-              izolacji termicznej i ekologiczne technologie.
+              Domy w Dobranowicach powstają w&nbsp;oparciu o&nbsp;wysokie
+              standardy izolacji termicznej i&nbsp;ekologiczne technologie.
             </p>
             <ul className="list-disc list-inside text-base sm:text-lg space-y-2">
               <li>
-                Ogrzewanie podłogowe w całym budynku zasilane pompą ciepła
+                Ogrzewanie podłogowe w&nbsp;całym budynku zasilane pompą ciepła.
               </li>
-              <li>Okna trzyszybowe o doskonałych parametrach izolacyjnych</li>
-              <li>Hydroizolacje fundamentów i balkonów</li>
               <li>
-                Gruba warstwa ocieplenia ścian (20 cm styropian EPS) i dachu
-                (piana Icynene)
+                Okna trzyszybowe o&nbsp;doskonałych parametrach izolacyjnych.
               </li>
-              <li>Możliwość podłączenia światłowodu</li>
+              <li>Hydroizolacje fundamentów i&nbsp;balkonów.</li>
+              <li>
+                Gruba warstwa ocieplenia ścian (20&nbsp;cm styropian EPS)
+                i&nbsp;dachu (piana Icynene).
+              </li>
+              <li>Możliwość podłączenia światłowodu.</li>
             </ul>
             <p className="text-base sm:text-lg">
-              Dzięki temu domy są energooszczędne, ciepłe zimą i przyjemnie
-              chłodne latem, co przekłada się na niższe koszty utrzymania i
-              komfort codziennego życia.
+              Dzięki temu domy są energooszczędne, ciepłe zimą i&nbsp;przyjemnie
+              chłodne latem, co przekłada się na niższe koszty utrzymania
+              i&nbsp;komfort codziennego życia.
             </p>
           </div>
         </div>
@@ -232,16 +241,20 @@ export default function Investment() {
           />
         </div>
         <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 lg:p-10">
-          <div className="p-6 sm:p-8 lg:w-3/5 text-white" data-aos="fade-right">
-            <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
+          <div
+            className="p-6 sm:p-8 lg:w-3/5 text-white space-y-4 sm:space-y-6"
+            data-aos="fade-right"
+          >
+            <h2 className="text-xl sm:text-2xl font-bold">
               Funkcjonalna przestrzeń dla całej rodziny
             </h2>
             <p className="text-base sm:text-lg mb-4 sm:mb-6">
               Każdy dom charakteryzuje się przemyślanym układem pomieszczeń,
-              dużymi przeszkleniami i wygodnym wyjściem do własnego ogrodu.
+              dużymi przeszkleniami i&nbsp;wygodnym wyjściem do własnego ogrodu.
               Jasne, dobrze doświetlone wnętrza sprzyjają zarówno relaksowi, jak
-              i pracy zdalnej. Zastosowane materiały – m.in. stolarka WIŚNIOWSKI
-              czy bramy Uni Therm – gwarantują trwałość, estetykę i komfort.
+              i&nbsp;pracy zdalnej. Zastosowane materiały – m.in. stolarka
+              WIŚNIOWSKI czy bramy Uni Therm – gwarantują trwałość, estetykę
+              i&nbsp;komfort.
             </p>
           </div>
         </div>
@@ -282,23 +295,28 @@ export default function Investment() {
           />
         </div>
         <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 justify-end lg:p-10">
-          <div className="p-6 sm:p-8 lg:w-3/5 text-white" data-aos="fade-left">
-            <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 ">
+          <div
+            className="p-6 sm:p-8 lg:w-3/5 text-white space-y-4 sm:space-y-6"
+            data-aos="fade-left"
+          >
+            <h2 className="text-xl sm:text-2xl font-bold ">
               Lokalizacja, która daje więcej
             </h2>
             <p className="text-base sm:text-lg">
-              Dobranowice to spokojna miejscowość położona tuż obok Wieliczki, z
-              szybkim dojazdem do Krakowa. Mieszkańcy mają dostęp do:
+              Dobranowice to spokojna miejscowość położona tuż obok Wieliczki,
+              z&nbsp;szybkim dojazdem do Krakowa. Mieszkańcy znajdą
+              w&nbsp;pobliżu:
             </p>
             <ul className="list-disc list-inside text-base sm:text-lg space-y-2 mb-4">
-              <li>Sklepy i punkty usługowe w pobliskiej Wieliczce</li>
-              <li>Szkoły i przedszkola w okolicy</li>
-              <li>Tereny zielone i trasy spacerowe</li>
-              <li>Atrakcje kulturalne w Krakowie i Wieliczce</li>
+              <li>Sklepy i&nbsp;punkty usługowe w pobliskiej Wieliczce.</li>
+              <li>Szkoły i&nbsp;przedszkola w okolicy.</li>
+              <li>Tereny zielone i&nbsp;trasy spacerowe.</li>
+              <li>Atrakcje kulturalne w&nbsp;Krakowie i&nbsp;Wieliczce.</li>
             </ul>
             <p className="text-base sm:text-lg">
-              Dobranowice to spokojna miejscowość z szybkim dojazdem do Krakowa
-              – idealne miejsce, które łączy bliskość miasta ze spokojem natury.
+              Dobranowice to spokojna miejscowość z&nbsp;szybkim dojazdem do
+              Krakowa – idealne miejsce, które łączy bliskość miasta ze spokojem
+              natury.
             </p>
             <div className="flex justify-center mt-4">
               <button
@@ -350,19 +368,25 @@ export default function Investment() {
           />
         </div>
         <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 lg:p-10">
-          <div className="p-6 sm:p-8 lg:w-3/5 text-white" data-aos="fade-right">
-            <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
+          <div
+            className="p-6 sm:p-8 lg:w-3/5 text-white space-y-4 sm:space-y-6"
+            data-aos="fade-right"
+          >
+            <h2 className="text-xl sm:text-2xl font-bold">
               Idealne miejsce dla Ciebie
             </h2>
             <ul className="list-disc list-inside text-base sm:text-lg space-y-2 mb-4">
-              <li>Spokojna, zielona okolica w sąsiedztwie Wieliczki,</li>
-              <li>Nowoczesne technologie i wysoki standard wykonania,</li>
-              <li>Ogrzewanie podłogowe i pompy ciepła w standardzie,</li>
-              <li>Przestronne wnętrza z prywatnym ogrodem.</li>
+              <li>Spokojna, zielona okolica w&nbsp;sąsiedztwie Wieliczki.</li>
+              <li>Nowoczesne technologie i&nbsp;wysoki standard wykonania.</li>
+              <li>
+                Ogrzewanie podłogowe i&nbsp;pompy ciepła w&nbsp;standardzie.
+              </li>
+              <li>Przestronne wnętrza z&nbsp;prywatnym ogrodem.</li>
             </ul>
             <p className="text-base sm:text-lg">
               <strong>Osiedle Dobranowice</strong> – dom, w którym znajdziesz
-              spokój, przestrzeń i wygodę, nie rezygnując z bliskości miasta.
+              spokój, przestrzeń i&nbsp;wygodę, nie rezygnując z&nbsp;bliskości
+              miasta.
             </p>
           </div>
         </div>

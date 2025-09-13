@@ -11,43 +11,72 @@ export default function Profits() {
     {
       icon: <FaShoppingCart className="text-[#e63946] text-5xl" />,
       title: "Zakupy",
-      description:
-        "Codzienne zakupy zrobisz wygodnie w pobliskiej Wieliczce – supermarkety, sklepy osiedlowe i lokalne punkty usługowe. W samej miejscowości dostępne są także mniejsze sklepy spożywcze.",
+      description: (
+        <span>
+          Codzienne zakupy zrobisz wygodnie w&nbsp;pobliskiej Wieliczce –
+          supermarkety, sklepy osiedlowe i&nbsp;lokalne punkty usługowe.
+          W&nbsp;samej miejscowości dostępne są także mniejsze sklepy spożywcze.
+        </span>
+      ),
       delay: 0,
     },
     {
       icon: <FaGraduationCap className="text-[#e63946] text-5xl" />,
       title: "Edukacja",
-      description:
-        "W Dobranowicach i okolicy działają przedszkola i szkoły podstawowe. W Wieliczce znajdziesz szkoły średnie i prywatne placówki edukacyjne – szybki dojazd ułatwia codzienną organizację.",
+      description: (
+        <span>
+          W Dobranowicach i&nbsp;okolicy działają przedszkola i&nbsp;szkoły
+          podstawowe. W&nbsp;Wieliczce znajdziesz szkoły średnie i&nbsp;prywatne
+          placówki edukacyjne – szybki dojazd ułatwia codzienną organizację.
+        </span>
+      ),
       delay: 100,
     },
     {
       icon: <FaBus className="text-[#e63946] text-5xl" />,
       title: "Transport",
-      description:
-        "Dogodny dojazd do Wieliczki i Krakowa – kilka minut do autostrady A4 i DK94. W pobliżu kursują także linie autobusowe, które ułatwiają komunikację.",
+      description: (
+        <span>
+          Dogodny dojazd do Wieliczki i&nbsp;Krakowa – kilka minut do autostrady
+          A4 i&nbsp;DK94. W&nbsp;pobliżu kursują także linie autobusowe, które
+          ułatwiają komunikację.
+        </span>
+      ),
       delay: 200,
     },
     {
       icon: <FaTheaterMasks className="text-[#e63946] text-5xl" />,
       title: "Rozrywka",
-      description:
-        "Kraków i Wieliczka oferują kina, teatry, restauracje i atrakcje turystyczne, takie jak Kopalnia Soli czy Tężnia Solankowa – idealne na czas wolny.",
+      description: (
+        <span>
+          Kraków i&nbsp;Wieliczka oferują kina, teatry, restauracje
+          i&nbsp;atrakcje turystyczne, takie jak Kopalnia Soli czy Tężnia
+          Solankowa – idealne na czas wolny.
+        </span>
+      ),
       delay: 300,
     },
     {
       icon: <FaHospital className="text-[#e63946] text-5xl" />,
       title: "Usługi",
-      description:
-        "W Wieliczce znajdziesz przychodnie, apteki, banki i inne punkty usługowe – codzienne sprawy załatwisz szybko i wygodnie.",
+      description: (
+        <span>
+          W&nbsp;Wieliczce znajdziesz przychodnie, apteki, banki i&nbsp;inne
+          punkty usługowe – codzienne sprawy załatwisz szybko i&nbsp;wygodnie.
+        </span>
+      ),
       delay: 400,
     },
     {
       icon: <FaLeaf className="text-[#e63946] text-5xl" />,
       title: "Rekreacja",
-      description:
-        "Dobranowice to spokojna, zielona okolica z trasami spacerowymi i rowerowymi. Własny ogród i taras to dodatkowa przestrzeń do relaksu.",
+      description: (
+        <span>
+          Dobranowice to spokojna, zielona okolica z&nbsp;trasami spacerowymi
+          i&nbsp;rowerowymi. Własny ogród i&nbsp;taras to dodatkowa przestrzeń
+          do relaksu.
+        </span>
+      ),
       delay: 500,
     },
   ];
