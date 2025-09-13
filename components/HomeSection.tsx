@@ -23,7 +23,7 @@ export default function HomeSection() {
       )}
       <section
         id="home"
-        className={`flex justify-center items-center w-full h-screen flex-col relative z-20 ${
+        className={`relative w-full h-screen flex items-center justify-center ${
           !imageLoaded ? "invisible" : ""
         }`}
       >
@@ -39,49 +39,31 @@ export default function HomeSection() {
             setTimeout(() => setImageLoaded(true), 300);
           }}
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 via-20% to-transparent z-10" />
+
         {imageLoaded && (
-          <>
-            <div
-              data-aos="fade-up"
-              data-aos-delay="500"
-              data-aos-duration="1000"
-            >
-              <Image
-                src={"/logo.png"}
-                quality={100}
-                unoptimized
-                priority
-                style={{
-                  objectFit: "cover",
-                  objectPosition: "center",
-                  zIndex: 30,
-                }}
-                alt="Logo Domy Dobranowice"
-                width={700}
-                height={300}
-              />
-            </div>
-            <div className="flex max-md:flex-col max-md:space-y-5 max-md:w-full max-md:items-center md:space-x-10 mt-8">
+          <div className="absolute max-sm:bottom-10 sm:top-1/2 left-6 sm:left-12 lg:left-24 z-20 w-full sm:max-w-xl text-center sm:text-left sm:transform sm:-translate-y-1/2">
+            <h1 className="text-white text-3xl sm:text-5xl lg:text-6xl font-bold leading-snug drop-shadow-[2px_2px_4px_rgba(0,0,0,0.7)]">
+              Nowoczesne osiedle domów <br /> w sąsiedztwie Wieliczki <br />
+              <span className="text-[#457b9d]">Twój azyl spokoju</span> blisko
+              miasta.
+            </h1>
+
+            <div className="mt-6 flex flex-col sm:flex-row gap-4 items-center sm:items-start">
               <Link
-                className="py-3 w-56 max-md:w-3/5 bg-[#457b9d] text-white rounded-2xl hover:bg-[#1d3557] hover:text-white font-semibold transition break-words max-w-full text-center drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
                 href="#houses"
-                data-aos="zoom-in"
-                data-aos-delay="900"
-                data-aos-duration="1000"
+                className="bg-[#1d3557] text-white text-lg sm:text-xl lg:text-2xl px-6 py-3 rounded-lg font-semibold shadow-lg transition hover:bg-[#e63946] w-fit"
               >
                 Zobacz ofertę
               </Link>
               <Link
-                className="py-3 w-56 max-md:w-3/5 bg-[#457b9d] text-white rounded-2xl hover:bg-[#1d3557] hover:text-white font-semibold transition break-words max-w-full text-center drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
                 href="#contact"
-                data-aos="zoom-in"
-                data-aos-delay="1100"
-                data-aos-duration="1000"
+                className="bg-white text-[#1d3557] text-lg sm:text-xl lg:text-2xl px-6 py-3 rounded-lg font-semibold shadow-lg transition hover:bg-[#457b9d] hover:text-[white] w-fit"
               >
                 Skontaktuj się
               </Link>
             </div>
-          </>
+          </div>
         )}
       </section>
     </>
