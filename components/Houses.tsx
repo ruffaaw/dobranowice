@@ -4,10 +4,16 @@ import houseCoordinates from "@/config/houseCoordinates";
 import { houseData } from "@/config/houseData";
 import { FaDownload } from "react-icons/fa6";
 import { useEffect, useRef, useState } from "react";
+import { FaInfoCircle } from "react-icons/fa";
 
 export default function Houses() {
   const listRef = useRef<HTMLDivElement>(null);
   //   const [houseOffers, setHouseOffers] = useState<any[]>([]);
+  const [openIndex, setOpenIndex] = useState<string | null>(null);
+
+  const toggleOpen = (key: string) => {
+    setOpenIndex(openIndex === key ? null : key);
+  };
 
   const getStatusText = (status: number) => {
     switch (status) {
@@ -147,7 +153,7 @@ export default function Houses() {
                     : house.status === 1
                     ? "bg-[#588157]/85"
                     : "bg-yellow-500/85"
-                } rounded-full w-5 h-5 lg:w-7 lg:h-7 xl:w-8 xl:h-8 text-sm lg:text-base font-bold transition-all duration-200 cursor-pointer`}
+                } rounded-full w-5 h-5 lg:w-7 lg:h-7 xl:w-8 xl:h-8 text-sm lg:text-base font-bold transition-all duration-200 cursor-pointer drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]`}
                 style={{
                   top: `${house.y}%`,
                   left: `${house.x}%`,
@@ -164,7 +170,7 @@ export default function Houses() {
 
         <div
           ref={listRef}
-          className="w-full md:w-[45%] flex justify-center items-start overflow-y-auto max-h-[46vh] md:max-h-[39vh]"
+          className="w-full md:w-[45%] flex justify-center items-start overflow-y-auto max-h-[50vh]"
           data-aos="fade-up"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full h-full">
@@ -195,11 +201,67 @@ export default function Houses() {
                   <p className="text-gray-600">Metraż: {house.metraz} m²</p>
                   <p className="text-gray-600">Pokoje: {house.pokoje}</p>
                   <p className="text-gray-600">Działka: {house.dzialka} ara</p>
-                  {house.status !== 0 && (
-                    <p className="text-gray-600 font-bold">
-                      Cena: {house.cena} zł
-                    </p>
+                  <div className="relative">
+                    <div className="text-gray-600 font-bold flex items-center flex-wrap space-x-1">
+                      <span>Cena: {formatPrice(house.cena)} zł </span>
+                      <span className="text-sm text-gray-500">
+                        (standard deweloperski)
+                      </span>
+                      <button
+                        onClick={() => toggleOpen(`${index}-deweloperski`)}
+                        className="p-1 rounded-full hover:bg-gray-200 transition"
+                      >
+                        <FaInfoCircle size={18} className="text-gray-500" />
+                      </button>
+                    </div>
+                    {openIndex === `${index}-deweloperski` && (
+                      <div
+                        className="absolute top-full left-1/2 -translate-x-1/2 mt-2 
+                        bg-white text-gray-700 text-sm shadow-lg rounded-lg p-3 
+                        border w-max z-10"
+                      >
+                        Najniższa cena z ostatnich 30 dni:{" "}
+                        {formatPrice(house.cena30)} zł
+                      </div>
+                    )}
+                  </div>
+                  {["1", "2", "5", "6"].includes(house.numer) && (
+                    <div className="relative">
+                      <div className="text-gray-600 font-bold flex items-center flex-wrap space-x-1">
+                        <span>
+                          Cena: {formatPrice(house.cenaStanSurowy ?? "")} zł{" "}
+                        </span>
+                        <span className="text-sm text-gray-500">
+                          (stan surowy zamknięty)
+                        </span>
+                        <button
+                          onClick={() => toggleOpen(`${index}-surowy`)}
+                          className="p-1 rounded-full hover:bg-gray-200 transition"
+                        >
+                          <FaInfoCircle size={18} className="text-gray-500" />
+                        </button>
+                      </div>
+                      {openIndex === `${index}-surowy` && (
+                        <div
+                          className="absolute top-full left-1/2 -translate-x-1/2 mt-2 
+                        bg-white text-gray-700 text-sm shadow-lg rounded-lg p-3 
+                        border w-max z-10"
+                        >
+                          Najniższa cena z ostatnich 30 dni:{" "}
+                          {formatPrice(house.cenaStanSurowy30 ?? "")} zł
+                        </div>
+                      )}
+                    </div>
                   )}
+                  <p className="text-gray-600 font-bold">
+                    Cena za metr:{" "}
+                    {formatPrice(
+                      Number(Number(house.cena) / Number(house.metraz)).toFixed(
+                        2
+                      )
+                    )}{" "}
+                    zł{" "}
+                  </p>
                 </div>
 
                 <div className="mt-4">
