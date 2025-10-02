@@ -65,36 +65,36 @@ export default function Contact() {
       message: `Imię i nazwisko: ${formData.name}\nEmail: ${formData.email}\nTelefon: ${formData.phone}\n\n${formData.message}`,
     };
 
-    // try {
-    //   const response = await fetch(
-    //     "https://jc5vg6se5e.execute-api.eu-north-1.amazonaws.com/dev/send-mail",
-    //     {
-    //       method: "POST",
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //         "x-api-key": "_just-a'test\"key,or>is<it?",
-    //       },
-    //       body: JSON.stringify(body),
-    //     }
-    //   );
-    //   if (response.ok) {
-    //     alert("Wiadomość została wysłana pomyślnie!");
-    //     setFormData({
-    //       name: "",
-    //       email: "",
-    //       phone: "",
-    //       message: "",
-    //       privacyPolicy: false,
-    //     });
-    //     setLastSubmissionTime(now);
-    //   } else {
-    //     throw new Error("Błąd podczas wysyłania wiadomości");
-    //   }
-    // } catch (error) {
-    //   alert("Nie udało się wysłać wiadomości. Spróbuj ponownie.");
-    // } finally {
-    //   setIsSubmitting(false);
-    // }
+    try {
+      const response = await fetch(
+        "https://jc5vg6se5e.execute-api.eu-north-1.amazonaws.com/dev/send-mail",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-api-key": "_just-a'test\"key,or>is<it?",
+          },
+          body: JSON.stringify(body),
+        }
+      );
+      if (response.ok) {
+        alert("Wiadomość została wysłana pomyślnie!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+          privacyPolicy: false,
+        });
+        setLastSubmissionTime(now);
+      } else {
+        throw new Error("Błąd podczas wysyłania wiadomości");
+      }
+    } catch (error) {
+      alert("Nie udało się wysłać wiadomości. Spróbuj ponownie.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -142,7 +142,7 @@ export default function Contact() {
             data-aos-duration="800"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3194.8443747714277!2d20.140027999999997!3d50.013461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTDCsDAwJzQ4LjUiTiAyMMKwMDgnMjQuMSJF!5e1!3m2!1spl!2spl!4v1735824868741!5m2!1spl!2spl"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10271.979145321855!2d20.1448094!3d49.9364391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716400ab5b90eb5%3A0xa3904b643c28215c!2s32-020%20S%C5%82awkowice!5e0!3m2!1spl!2spl!4v1759411009807!5m2!1spl!2spl"
               frameBorder="0"
               className="w-full h-full rounded-lg shadow-lg"
             ></iframe>
