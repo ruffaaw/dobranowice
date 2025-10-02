@@ -1,17 +1,33 @@
 "use client";
 import Image from "next/image";
-import houseCoordinates from "@/config/houseCoordinates";
-import { houseData } from "@/config/houseData";
 import { FaDownload } from "react-icons/fa6";
-import { useEffect, useRef, useState } from "react";
-import { FaInfoCircle } from "react-icons/fa";
+import { Key, useEffect, useRef, useState } from "react";
+import { FaClock, FaInfoCircle } from "react-icons/fa";
 
 export default function Houses() {
   const listRef = useRef<HTMLDivElement>(null);
-  //   const [houseOffers, setHouseOffers] = useState<any[]>([]);
+  const [houseOffers, setHouseOffers] = useState<any[]>([]);
   const [openIndex, setOpenIndex] = useState<string | null>(null);
+  const [historyIndex, setHistoryIndex] = useState<number | null>(null);
+  const [historyZamIndex, setHistoryZamIndex] = useState<number | null>(null);
+
+  const toggleHistory = (i: number) => {
+    if (openIndex !== null) setOpenIndex(null);
+    if (historyZamIndex !== null) setHistoryZamIndex(null);
+
+    setHistoryIndex(historyIndex === i ? null : i);
+  };
+  const toggleHistoryZam = (i: number) => {
+    if (openIndex !== null) setOpenIndex(null);
+    if (historyIndex !== null) setHistoryIndex(null);
+
+    setHistoryZamIndex(historyZamIndex === i ? null : i);
+  };
 
   const toggleOpen = (key: string) => {
+    if (historyIndex !== null) setHistoryIndex(null);
+    if (historyZamIndex !== null) setHistoryZamIndex(null);
+
     setOpenIndex(openIndex === key ? null : key);
   };
 
@@ -34,40 +50,38 @@ export default function Houses() {
     return cleanPrice.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   };
 
-  const houseOffers = houseData;
+  // const houseOffers = houseData;
 
-  //   useEffect(() => {
+  useEffect(() => {
+    const fetchHouseOffers = async () => {
+      try {
+        const response = await fetch(
+          "https://dltpt2zpu8.execute-api.eu-north-1.amazonaws.com/prod/get-all"
+        );
 
-  //     const fetchHouseOffers = async () => {
-  //       try {
-  //         const response = await fetch(
-  //           "https://o28scgzs0g.execute-api.eu-central-1.amazonaws.com/prd/get-items"
-  //         );
-  //         const data = await response.json();
-  //         const sortedData = data.body.sort((a: any, b: any) =>
-  //           a.Id.localeCompare(b.Id)
-  //         );
+        const data = await response.json();
+        const sortedData = data.body.sort(
+          (a: any, b: any) => Number(a.id) - Number(b.id)
+        );
 
-  //         const combinedData = sortedData.map((house: any) => {
-  //           const coords = houseCoordinates.find(
-  //             (coord) => coord.numer === house.Id
-  //           );
-  //           return {
-  //             ...house,
-  //             x: coords?.x || 0,
-  //             y: coords?.y || 0,
-  //             cena: house.cena ? formatPrice(house.cena) : house.cena,
-  //           };
-  //         });
-  //         console.log(combinedData);
-  //         setHouseOffers(combinedData);
-  //       } catch (error) {
-  //         alert("Błąd podczas pobierania danych");
-  //         console.log("Błąd podczas pobierania danych: ", error);
-  //       }
-  //     };
-  //     fetchHouseOffers();
-  //   }, []);
+        // const combinedData = sortedData.map((house: any) => {
+        //   const coords = houseCoordinates.find(
+        //     (coord) => coord.numer === house.id
+        //   );
+        //   return {
+        //     ...house,
+        //     x: coords?.x || 0,
+        //     y: coords?.y || 0,
+        //   };
+        // });
+        setHouseOffers(sortedData);
+      } catch (error) {
+        alert("Błąd podczas pobierania danych");
+        console.log("Błąd podczas pobierania danych: ", error);
+      }
+    };
+    fetchHouseOffers();
+  }, []);
 
   const isMobile = () => window.innerWidth <= 768;
 
@@ -188,22 +202,22 @@ export default function Houses() {
                     Status:{" "}
                     <span
                       className={`${
-                        house.status === 0
+                        house.dostepnosc === 0
                           ? "text-red-500"
-                          : house.status === 1
+                          : house.dostepnosc === 1
                           ? "text-green-500"
                           : "text-yellow-500"
                       } font-semibold`}
                     >
-                      {getStatusText(house.status)}
+                      {getStatusText(house.dostepnosc)}
                     </span>
                   </p>
                   <p className="text-gray-600">Metraż: {house.metraz} m²</p>
                   <p className="text-gray-600">Pokoje: {house.pokoje}</p>
-                  <p className="text-gray-600">Działka: {house.dzialka} ara</p>
+                  <p className="text-gray-600">Ogródek: {house.ogrodek} ara</p>
                   <div className="relative">
                     <div className="text-gray-600 font-bold flex items-center flex-wrap space-x-1">
-                      <span>Cena: {formatPrice(house.cena)} zł </span>
+                      <span>Cena: {formatPrice(house.cenaDew)} zł </span>
                       <span className="text-sm text-gray-500">
                         (standard deweloperski)
                       </span>
@@ -213,6 +227,15 @@ export default function Houses() {
                       >
                         <FaInfoCircle size={18} className="text-gray-500" />
                       </button>
+                      {house.price_history &&
+                        house.price_history.length > 0 && (
+                          <button
+                            onClick={() => toggleHistory(index)}
+                            className="p-1 rounded-full hover:bg-gray-200 transition"
+                          >
+                            <FaClock size={18} className="text-gray-500" />
+                          </button>
+                        )}
                     </div>
                     {openIndex === `${index}-deweloperski` && (
                       <div
@@ -221,15 +244,55 @@ export default function Houses() {
                         border w-max z-10"
                       >
                         Najniższa cena z ostatnich 30 dni:{" "}
-                        {formatPrice(house.cena30)} zł
+                        {formatPrice(house.cenaDew30)} zł
                       </div>
                     )}
+                    {historyIndex === index && (
+                      <div
+                        className="absolute top-full left-1/2 -translate-x-1/2 mt-2 
+      bg-white text-gray-700 text-sm shadow-lg rounded-lg p-3 
+      border w-max z-10 max-h-48 overflow-y-auto"
+                      >
+                        Historia cen:
+                        <ul className="space-y-1 mt-2">
+                          {house.price_history &&
+                            house.price_history.map(
+                              (
+                                entry: {
+                                  date: string | number | Date;
+                                  cenaDew: number;
+                                },
+                                i: Key | null | undefined
+                              ) => (
+                                <li key={i} className="text-gray-700">
+                                  {new Date(entry.date).toLocaleDateString(
+                                    "pl-PL"
+                                  )}{" "}
+                                  –{" "}
+                                  <span className="font-semibold">
+                                    {formatPrice(entry.cenaDew)} zł
+                                  </span>
+                                </li>
+                              )
+                            )}
+                        </ul>
+                      </div>
+                    )}
+                    <p className="text-gray-600 font-bold">
+                      Cena za metr:{" "}
+                      {formatPrice(
+                        Number(
+                          Number(house.cenaDew) / Number(house.metraz)
+                        ).toFixed(2)
+                      )}{" "}
+                      zł{" "}
+                    </p>
                   </div>
                   {["1", "2", "5", "6"].includes(house.numer) && (
-                    <div className="relative">
+                    <div className="mt-3 relative">
                       <div className="text-gray-600 font-bold flex items-center flex-wrap space-x-1">
                         <span>
-                          Cena: {formatPrice(house.cenaStanSurowy ?? "")} zł{" "}
+                          Cena: {formatPrice(house.cenaZam ?? "")} zł{" "}
                         </span>
                         <span className="text-sm text-gray-500">
                           (stan surowy zamknięty)
@@ -240,6 +303,15 @@ export default function Houses() {
                         >
                           <FaInfoCircle size={18} className="text-gray-500" />
                         </button>
+                        {house.price_history_zam &&
+                          house.price_history_zam.length > 0 && (
+                            <button
+                              onClick={() => toggleHistoryZam(index)}
+                              className="p-1 rounded-full hover:bg-gray-200 transition"
+                            >
+                              <FaClock size={18} className="text-gray-500" />
+                            </button>
+                          )}
                       </div>
                       {openIndex === `${index}-surowy` && (
                         <div
@@ -248,26 +320,57 @@ export default function Houses() {
                         border w-max z-10"
                         >
                           Najniższa cena z ostatnich 30 dni:{" "}
-                          {formatPrice(house.cenaStanSurowy30 ?? "")} zł
+                          {formatPrice(house.cenaZam30 ?? "")} zł
                         </div>
                       )}
+                      {historyZamIndex === index && (
+                        <div
+                          className="absolute top-full left-1/2 -translate-x-1/2 mt-2 
+      bg-white text-gray-700 text-sm shadow-lg rounded-lg p-3 
+      border w-max z-10 max-h-48 overflow-y-auto"
+                        >
+                          Historia cen:
+                          <ul className="space-y-1 mt-2">
+                            {house.price_history_zam &&
+                              house.price_history_zam.map(
+                                (
+                                  entry: {
+                                    date: string | number | Date;
+                                    cenaZam: number;
+                                  },
+                                  i: Key | null | undefined
+                                ) => (
+                                  <li key={i} className="text-gray-700">
+                                    {new Date(entry.date).toLocaleDateString(
+                                      "pl-PL"
+                                    )}{" "}
+                                    –{" "}
+                                    <span className="font-semibold">
+                                      {formatPrice(entry.cenaZam)} zł
+                                    </span>
+                                  </li>
+                                )
+                              )}
+                          </ul>
+                        </div>
+                      )}
+                      <p className="text-gray-600 font-bold">
+                        Cena za metr:{" "}
+                        {formatPrice(
+                          Number(
+                            Number(house.cenaZam) / Number(house.metraz)
+                          ).toFixed(2)
+                        )}{" "}
+                        zł{" "}
+                      </p>
                     </div>
                   )}
-                  <p className="text-gray-600 font-bold">
-                    Cena za metr:{" "}
-                    {formatPrice(
-                      Number(Number(house.cena) / Number(house.metraz)).toFixed(
-                        2
-                      )
-                    )}{" "}
-                    zł{" "}
-                  </p>
                 </div>
 
                 <div className="mt-4">
                   <a
                     className="w-full bg-[#457b9d] p-4 rounded-xl text-white flex justify-center items-center gap-2 hover:bg-[#1d3557] transition-all duration-200 "
-                    href={house.pdf}
+                    href={`/kartyMieszkan/${house.numer}.jpg`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
