@@ -142,7 +142,7 @@ export default function Contact() {
             data-aos-duration="800"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10271.979145321855!2d20.1448094!3d49.9364391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716400ab5b90eb5%3A0xa3904b643c28215c!2s32-020%20S%C5%82awkowice!5e0!3m2!1spl!2spl!4v1759411009807!5m2!1spl!2spl"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d315.89196735403516!2d20.131875514185936!3d49.933931707594994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1spl!2spl!4v1760539066140!5m2!1spl!2spl"
               frameBorder="0"
               className="w-full h-full rounded-lg shadow-lg"
             ></iframe>
