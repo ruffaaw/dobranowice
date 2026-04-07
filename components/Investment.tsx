@@ -1,15 +1,7 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
-import { FaMoon, FaSun } from "react-icons/fa6";
 
 export default function Investment() {
-  const [isDay, setIsDay] = useState(true);
-
-  const toggleImage = () => {
-    setIsDay(!isDay);
-  };
-
   return (
     <section
       id="investment"
@@ -43,38 +35,14 @@ export default function Investment() {
           <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
             <Image
               src="/0001.webp"
-              alt="Modern houses - day"
+              alt="Modern houses"
               fill
-              className={`rounded-lg shadow-lg transition-opacity duration-700 ease-in-out ${
-                isDay ? "opacity-100" : "opacity-0"
-              }`}
-              style={{ objectFit: "cover" }}
-              unoptimized
-              loading="lazy"
-            />
-
-            <Image
-              src="/dobranowice_zmierzch.webp"
-              alt="Modern houses - night"
-              fill
-              className={`rounded-lg shadow-lg transition-opacity duration-700 ease-in-out ${
-                !isDay ? "opacity-100" : "opacity-0"
-              }`}
+              className="rounded-lg shadow-lg"
               style={{ objectFit: "cover" }}
               unoptimized
               loading="lazy"
             />
           </div>
-
-          <button
-            className={`absolute bottom-4 left-1/2 -translate-x-1/2 w-28 h-auto bg-opacity-75 text-white px-4 py-2 rounded-md ${
-              isDay ? "bg-[#457b9d]" : "bg-[#1d3557]"
-            } transition-all duration-300 flex flex-row items-center justify-center gap-2`}
-            onClick={toggleImage}
-          >
-            {isDay ? <FaSun /> : <FaMoon />}
-            {isDay ? "Dzień" : "Wieczór"}
-          </button>
         </div>
 
         <div className="bg-[#457b9d] rounded-lg overflow-hidden shadow-lg flex flex-col md:flex-row w-full lg:w-4/5 lg:p-10">
@@ -103,37 +71,14 @@ export default function Investment() {
         >
           <Image
             src="/0001.webp"
-            alt="Modern houses - day"
+            alt="Modern houses"
             layout="responsive"
             objectFit="cover"
-            className={`rounded-lg shadow-lg absolute transition-opacity duration-700 ease-in-out ${
-              isDay ? "opacity-100" : "opacity-0"
-            }`}
+            className="rounded-lg shadow-lg"
             width={533}
             height={400}
             unoptimized
           />
-          <Image
-            src="/dobranowice_zmierzch.webp"
-            alt="Modern houses - night"
-            layout="responsive"
-            objectFit="cover"
-            className={`rounded-lg shadow-lg absolute transition-opacity duration-700 ease-in-out ${
-              !isDay ? "opacity-100" : "opacity-0"
-            }`}
-            width={533}
-            height={400}
-            unoptimized
-          />
-          <button
-            className={`absolute top-18 xl:top-24 w-1/3 h-auto bg-opacity-75 text-white px-4 py-2 rounded-md ${
-              isDay ? "bg-[#457b9d]" : "bg-[#1d3557]"
-            } transition-all duration-300 flex flex-row items-center justify-center gap-2`}
-            onClick={toggleImage}
-          >
-            {isDay ? <FaSun /> : <FaMoon />}
-            {isDay ? "Dzień" : "Wieczór"}
-          </button>
         </div>
       </div>
 
@@ -266,7 +211,7 @@ export default function Investment() {
           data-aos="fade-right"
         >
           <Image
-            src="/dobranowice_zmierzch_2.webp"
+            src="/0001.webp"
             alt="Modern houses"
             layout="responsive"
             objectFit="cover"
@@ -283,7 +228,7 @@ export default function Investment() {
           data-aos="fade-right"
         >
           <Image
-            src="/dobranowice_zmierzch_2.webp"
+            src="/0001.webp"
             alt="Modern houses"
             layout="responsive"
             objectFit="cover"
