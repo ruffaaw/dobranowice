@@ -14,11 +14,11 @@ export default function Contact() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [lastSubmissionTime, setLastSubmissionTime] = useState<number | null>(
-    null
+    null,
   );
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const target = e.target as HTMLInputElement | HTMLTextAreaElement;
     const { name, value } = target;
@@ -41,7 +41,7 @@ export default function Contact() {
     const now = Date.now();
     if (lastSubmissionTime && now - lastSubmissionTime < 60000) {
       alert(
-        "Wiadomość została już wysłana. Poczekaj przed wysłaniem kolejnej."
+        "Wiadomość została już wysłana. Poczekaj przed wysłaniem kolejnej.",
       );
       setIsSubmitting(false);
       return;
@@ -75,7 +75,7 @@ export default function Contact() {
             "x-api-key": "_just-a'test\"key,or>is<it?",
           },
           body: JSON.stringify(body),
-        }
+        },
       );
       if (response.ok) {
         alert("Wiadomość została wysłana pomyślnie!");
@@ -142,7 +142,7 @@ export default function Contact() {
             data-aos-duration="800"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d315.89196735403516!2d20.131875514185936!3d49.933931707594994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1spl!2spl!4v1760539066140!5m2!1spl!2spl"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d463.258387054604!2d20.13189982376785!3d49.93394828531485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716401297007c0f%3A0xc6bfe095bd9b19a6!2s32-020%20S%C5%82awkowice!5e1!3m2!1spl!2spl!4v1775766836220!5m2!1spl!2spl"
               frameBorder="0"
               className="w-full h-full rounded-lg shadow-lg"
             ></iframe>
