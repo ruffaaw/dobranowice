@@ -324,7 +324,7 @@ export default function Investment() {
                 onClick={() =>
                   window.open(
                     "https://maps.app.goo.gl/KssHA4FVSg5khjQi8",
-                    "_blank"
+                    "_blank",
                   )
                 }
               >
