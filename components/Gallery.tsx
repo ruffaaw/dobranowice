@@ -12,7 +12,7 @@ export default function Gallery() {
     "/0002.webp",
     "/0003.webp",
     "/dobranowice_zmierzch_2.webp",
-    "/dobranowice_zmierzch.webp",
+    // "/dobranowice_zmierzch.webp",
     "/dron_nowy1.webp",
     "/dron_nowy2.webp",
   ];
