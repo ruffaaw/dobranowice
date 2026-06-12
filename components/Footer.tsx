@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { FaLongArrowAltDown } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -36,6 +37,29 @@ export default function Footer() {
               />
             </Link> */}
           </div>
+
+          <div className="flex justify-center items-center my-5 lg:my-0">
+            <Link
+              href="/prospektInformacyjny/PROSPEKT_INFORMACYJNY_dobranowice.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Pobierz prospekt informacyjny w formacie PDF"
+              className="group inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-white/10 px-5 py-3 text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/20"
+            >
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-xl transition group-hover:bg-white/25">
+                <FaLongArrowAltDown />
+              </span>
+              <span className="text-left">
+                <span className="block text-xs uppercase tracking-[0.2em] text-white/70">
+                  Prospekt informacyjny
+                </span>
+                <span className="block text-lg font-semibold leading-tight">
+                  Pobierz PDF
+                </span>
+              </span>
+            </Link>
+          </div>
+
           <div className="flex flex-col justify-center items-center mt-5 lg:mt-0">
             <div className="flex flex-row gap-4">
               <Link
